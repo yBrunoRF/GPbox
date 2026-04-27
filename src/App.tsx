@@ -280,7 +280,7 @@ export default function App() {
 
             {/* Controles */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 text-left md:text-right">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 text-center md:text-right">
                 Controles:
               </h3>
               <div className="space-y-4 text-zinc-300 text-sm md:text-base">
