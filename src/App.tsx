@@ -108,6 +108,67 @@ export default function App() {
           </a>
         </motion.div>
 
+        {/* SOME GAMES SECTION */}
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           className="w-full max-w-4xl mb-14 mt-6 text-center"
+        >
+          <h3 className="text-2xl md:text-4xl font-display font-medium text-white mb-6">
+            Alguns dos jogos:
+          </h3>
+          
+          <div className="flex justify-center mb-10 animate-bounce">
+            <svg width="40" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-[0_0_8px_rgba(220,38,38,0.8)]">
+              <path d="M12 22L2 12H9V2H15V12H22L12 22Z" fill="#ef4444"/>
+            </svg>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 px-2">
+             {/* Game 1 - Playstation */}
+             <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
+               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1593500/library_600x900.jpg" alt="God of War (Playstation)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-500/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
+               <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
+                 <Gamepad2 className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Playstation</span>
+               </div>
+             </div>
+             {/* Game 2 - Xbox */}
+             <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
+               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/976730/library_600x900.jpg" alt="Halo (Xbox)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <div className="absolute inset-0 border-2 border-transparent group-hover:border-green-500/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
+               <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
+                 <MonitorPlay className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Xbox</span>
+               </div>
+             </div>
+             {/* Game 3 - Nintendo */}
+             <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
+               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+               <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Super_Mario_World_Coverart.png" alt="Super Mario World (Nintendo)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <div className="absolute inset-0 border-2 border-transparent group-hover:border-red-500/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
+               <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
+                 <Gamepad2 className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Nintendo</span>
+               </div>
+             </div>
+             {/* Game 4 - Sega */}
+             <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
+               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/584400/library_600x900.jpg" alt="Sonic (Sega)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-400/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
+               <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
+                 <Gamepad2 className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Sega / Mega Drive</span>
+               </div>
+             </div>
+          </div>
+        </motion.div>
+
         {/* 5. BENEFITS (CHECKLIST) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
