@@ -12,6 +12,7 @@ import {
   Lock,
   Play
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [timeLeft, setTimeLeft] = useState(15 * 60);
@@ -375,6 +376,7 @@ export default function App() {
         </motion.div>
 
       </main>
+      <Analytics />
     </div>
   );
 }
