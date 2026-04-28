@@ -372,7 +372,7 @@ export default function App() {
           </div>
           <div className="flex items-center gap-2 border-x border-zinc-800 px-8">
             <CheckCircle2 className="w-5 h-5 text-green-500" />
-            <span>+15.000 Alunos</span>
+            <span>+15.000 Clientes Satisfeitos</span>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-5 h-5 text-green-500" />
