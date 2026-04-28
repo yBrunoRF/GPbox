@@ -29,6 +29,19 @@ export default function App() {
 
   const affiliateLink = "https://pay.kiwify.com.br/iLDn5K5?afid=EA0RbmtH";
 
+  const trackPurchaseClick = () => {
+    // Rastreamento Meta Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout');
+    }
+    // Rastreamento Google Ads
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18123749861/InitiateCheckout', // Verifique este rótulo no seu painel Google Ads
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen font-sans selection:bg-red-500/30">
       
@@ -94,6 +107,7 @@ export default function App() {
         >
           <a
             href={affiliateLink}
+            onClick={trackPurchaseClick}
             className="group relative inline-block text-center w-full sm:w-auto overflow-hidden rounded-full bg-[#00d000] hover:bg-[#00b000] px-8 md:px-12 py-5 font-bold text-white shadow-[0_0_30px_rgba(0,208,0,0.5)] animate-pulse hover:animate-none transition-all duration-300 hover:scale-[1.02] active:scale-95"
           >
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#00b000] to-[#00d000] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -125,7 +139,7 @@ export default function App() {
             </svg>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 px-2">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-2">
              {/* Game 1 - Playstation */}
              <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
@@ -280,10 +294,10 @@ export default function App() {
 
             {/* Controles */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 text-center md:text-right">
+              <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 text-center">
                 Controles:
               </h3>
-              <div className="space-y-4 text-zinc-300 text-sm md:text-base">
+              <div className="space-y-4 text-zinc-300 text-sm md:text-base text-center">
                 <p>
                   <strong className="text-white">CONTROLES COMPATIVEIS:</strong> Xbox 360 Controller, Sony PS4 Controller, 8BitDo SN30 Pro, Gamesir-T4, Knup USB Gamepad
                 </p>
@@ -345,6 +359,27 @@ export default function App() {
           </div>
         </motion.div>
 
+        {/* SOCIAL PROOF / TRUST COUNTER */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap justify-center gap-8 mb-14 text-zinc-500 font-bold uppercase tracking-widest text-xs"
+        >
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-5 h-5 text-green-500" />
+            <span>Compra Segura</span>
+          </div>
+          <div className="flex items-center gap-2 border-x border-zinc-800 px-8">
+            <CheckCircle2 className="w-5 h-5 text-green-500" />
+            <span>+15.000 Alunos</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-5 h-5 text-green-500" />
+            <span>Entrega Imediata</span>
+          </div>
+        </motion.div>
+
         {/* 6. PROMOTIONAL OFFER SECTION */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -381,6 +416,7 @@ export default function App() {
 
           <a
             href={affiliateLink}
+            onClick={trackPurchaseClick}
             className="inline-flex flex-col md:flex-row items-center justify-center gap-2 w-full sm:w-auto bg-[#00d000] hover:bg-[#00b000] text-white font-bold text-lg md:text-2xl py-4 md:py-6 px-10 rounded-full shadow-[0_0_30px_rgba(0,208,0,0.5)] transition-all hover:scale-105 active:scale-95 uppercase tracking-wide mb-8 animate-pulse hover:animate-none group"
           >
              <Gamepad2 className="w-7 h-7" /> EU QUERO REVIVER ESSA NOSTALGIA!
@@ -407,12 +443,15 @@ export default function App() {
           viewport={{ once: true }}
           className="w-full max-w-3xl border-t border-zinc-800 pt-10 pb-4 text-center"
         >
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 text-left bg-zinc-900 border border-zinc-700/50 p-6 rounded-xl">
-             <ShieldCheck className="w-16 h-16 text-green-500 flex-shrink-0" />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 text-left bg-zinc-900 border border-zinc-700/50 p-6 rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+             <div className="relative">
+               <ShieldCheck className="w-16 h-16 text-green-500 flex-shrink-0" />
+               <div className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-lg">7 DIAS</div>
+             </div>
              <div>
-               <h4 className="text-xl font-bold text-white mb-2">Risco ZERO. Garantia de 7 Dias.</h4>
+               <h4 className="text-xl font-bold text-white mb-2 uppercase tracking-wide">Sua Satisfação ou seu Dinheiro de Volta</h4>
                <p className="text-sm text-zinc-400">
-                 Se por qualquer motivo você não gostar ou não conseguir instalar os jogos no seu PC, nós devolvemos <strong className="text-white">100% do seu dinheiro</strong> pago na mesma hora.
+                 Fique tranquilo! Você tem <strong className="text-white">7 dias de garantia incondicional</strong>. Se o GPBOX não for tudo o que prometemos, devolvemos seu dinheiro integralmente, sem perguntas e sem burocracia.
                </p>
              </div>
           </div>
