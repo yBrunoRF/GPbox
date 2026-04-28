@@ -143,41 +143,41 @@ export default function App() {
              {/* Game 1 - Playstation */}
              <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
-               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1593500/library_600x900.jpg" alt="God of War (Playstation)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1593500/library_600x900.jpg" alt="Jogo de Ação (Console 3D)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
                <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-500/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
                <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
                  <Gamepad2 className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
-                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Playstation</span>
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Sistemas 32-bits</span>
                </div>
              </div>
              {/* Game 2 - Xbox */}
              <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
-               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/976730/library_600x900.jpg" alt="Halo (Xbox)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/976730/library_600x900.jpg" alt="Ação FPS (Sistemas Modernos)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
                <div className="absolute inset-0 border-2 border-transparent group-hover:border-green-500/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
                <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
                  <MonitorPlay className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
-                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Xbox</span>
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Sistemas Modernos</span>
                </div>
              </div>
              {/* Game 3 - Nintendo */}
              <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
-               <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Super_Mario_World_Coverart.png" alt="Super Mario World (Nintendo)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Super_Mario_World_Coverart.png" alt="Jogo de Aventura (Clássicos 16-bits)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
                <div className="absolute inset-0 border-2 border-transparent group-hover:border-red-500/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
                <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
                  <Gamepad2 className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
-                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Nintendo</span>
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Coleção 16-bits</span>
                </div>
              </div>
              {/* Game 4 - Sega */}
              <div className="relative aspect-[2/3] rounded-xl overflow-hidden border border-zinc-800 shadow-2xl group cursor-pointer bg-zinc-900">
                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
-               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/584400/library_600x900.jpg" alt="Sonic (Sega)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+               <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/584400/library_600x900.jpg" alt="Jogo Clássico de Velocidade (Anos 90)" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
                <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-400/50 rounded-xl transition-colors duration-300 z-20 pointer-events-none"></div>
                <div className="absolute bottom-4 left-0 right-0 z-20 flex flex-col items-center">
                  <Gamepad2 className="w-6 h-6 text-zinc-400 mb-1 opacity-50 block md:hidden" />
-                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Sega / Mega Drive</span>
+                 <span className="text-white font-bold font-display tracking-widest text-xs md:text-base uppercase drop-shadow-[0_0_5px_rgba(0,0,0,0.8)]">Sistemas Retrô</span>
                </div>
              </div>
           </div>
@@ -205,7 +205,7 @@ export default function App() {
               <div>
                 <h4 className="text-white font-bold text-lg">Mais de 7.000 Jogos</h4>
                 <p className="text-zinc-400 leading-relaxed">
-                  Os maiores clássicos de PS1, SNES, Mega Drive, Arcade, N64 e muito mais em um único sistema.
+                  Os grandes títulos que marcaram as décadas de 80, 90 e 2000 reunidos em um sistema focado em nostalgia.
                 </p>
               </div>
             </li>
@@ -217,7 +217,7 @@ export default function App() {
               <div>
                 <h4 className="text-white font-bold text-lg">100% Offline</h4>
                 <p className="text-zinc-400 leading-relaxed">
-                  Você não precisa de internet para jogar. Fez o download, instalou, a diversão é garantida onde você estiver.
+                  Você não precisa de internet para jogar. Fez o download e instalou, pode aproveitar seus jogos onde estiver.
                 </p>
               </div>
             </li>
@@ -241,7 +241,7 @@ export default function App() {
               <div>
                 <h4 className="text-white font-bold text-lg">Acesso Vitalício + Suporte</h4>
                 <p className="text-zinc-400 leading-relaxed">
-                  Pagamento único! Sem surpresas no cartão. Você joga para sempre e conta com nossa equipe para tirar qualquer dúvida.
+                  Sem mensalidades! Sem surpresas de cobranças recorrentes. Você tem acesso e conta com nossa equipe para tirar suas dúvidas.
                 </p>
               </div>
             </li>
@@ -299,10 +299,10 @@ export default function App() {
               </h3>
               <div className="space-y-4 text-zinc-300 text-sm md:text-base text-center">
                 <p>
-                  <strong className="text-white">CONTROLES COMPATIVEIS:</strong> Xbox 360 Controller, Sony PS4 Controller, 8BitDo SN30 Pro, Gamesir-T4, Knup USB Gamepad
+                  <strong className="text-white">CONTROLES COMPATIVEIS:</strong> A maioria dos controles USB e Bluetooth, como 8BitDo, Gamesir, Knup e diversos outros do mercado.
                 </p>
                 <p>
-                  Recomendamos que seja usado controles de XBOX ou um controle que seja com driver XINPUT.
+                  Recomendamos que seja usado um controle que seja compatível com driver XINPUT para melhor experiência.
                 </p>
                 <p>
                   DRIVER XINPUT é o mesmo driver que os controles da Microsoft utilizam, sendo assim são
@@ -449,9 +449,9 @@ export default function App() {
                <div className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-lg">7 DIAS</div>
              </div>
              <div>
-               <h4 className="text-xl font-bold text-white mb-2 uppercase tracking-wide">Sua Satisfação ou seu Dinheiro de Volta</h4>
+               <h4 className="text-xl font-bold text-white mb-2 uppercase tracking-wide">Direito de Arrependimento</h4>
                <p className="text-sm text-zinc-400">
-                 Fique tranquilo! Você tem <strong className="text-white">7 dias de garantia incondicional</strong>. Se o GPBOX não for tudo o que prometemos, devolvemos seu dinheiro integralmente, sem perguntas e sem burocracia.
+                 Fique tranquilo! Você tem <strong className="text-white">7 dias para avaliar</strong> o GPBOX em casa. Dentro desse prazo, você pode solicitar o cancelamento e reembolso, de acordo com o Código de Defesa do Consumidor.
                </p>
              </div>
           </div>
@@ -468,9 +468,12 @@ export default function App() {
             <span className="px-3 py-1 border border-zinc-800 rounded">Boleto</span>
           </div>
 
+          <p className="text-xs text-zinc-700 mb-2">
+            &copy; {new Date().getFullYear()} GPBOX. Todos os direitos reservados. O GPBOX é um software de organização de mídia.<br/>
+            Este site não possui vínculo com as empresas desenvolvedoras de jogos e não fornecemos Roms.
+          </p>
           <p className="text-xs text-zinc-700">
-            &copy; {new Date().getFullYear()} GPBOX. Todos os direitos reservados.<br/>
-            Este site não faz parte dos sites Facebook, Google ou suas afiliadas.
+            <a href="#" className="hover:text-zinc-500 underline">Termos de Uso</a> &nbsp;|&nbsp; <a href="#" className="hover:text-zinc-500 underline">Política de Privacidade</a> &nbsp;|&nbsp; Suporte: <a href="mailto:contato.gpbox@gmail.com" className="hover:text-zinc-500">contato.gpbox@gmail.com</a>
           </p>
         </motion.div>
 
