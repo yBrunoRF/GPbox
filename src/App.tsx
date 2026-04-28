@@ -34,11 +34,18 @@ export default function App() {
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'InitiateCheckout');
     }
-    // Rastreamento Google Ads
+    // Rastreamento Google Ads / Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-18123749861/InitiateCheckout', // Verifique este rótulo no seu painel Google Ads
-      });
+      const adsId = import.meta.env.VITE_GOOGLE_ADS_ID;
+      if (adsId && adsId !== 'SEU_ID_AQUI') {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': `${adsId}/InitiateCheckout`,
+        });
+      } else {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-18123749861/InitiateCheckout',
+        });
+      }
     }
   };
 
