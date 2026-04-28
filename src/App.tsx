@@ -36,16 +36,9 @@ export default function App() {
     }
     // Rastreamento Google Ads / Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      const adsId = import.meta.env.VITE_GOOGLE_ADS_ID;
-      if (adsId && adsId !== 'SEU_ID_AQUI') {
-        (window as any).gtag('event', 'conversion', {
-          'send_to': `${adsId}/InitiateCheckout`,
-        });
-      } else {
-        (window as any).gtag('event', 'conversion', {
-          'send_to': 'AW-18123749861/InitiateCheckout',
-        });
-      }
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-18123749861/InitiateCheckout',
+      });
     }
   };
 
